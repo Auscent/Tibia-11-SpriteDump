@@ -125,7 +125,7 @@ namespace T11_SpriteDump
 				Stream input = reader.BaseStream;
 				
 				// CIP's header
-				input.Position = 6; // Skip past 6 initial constant bytes
+				input.Position = 30; // Skip past 30 (value for tibia 11.49, 11.50) initial constant bytes
 				while ((reader.ReadByte() & 0x80) == 0x80) { } // LZMA size, 7-bit integer where MSB = flag for next byte used
 				
 				// LZMA file
