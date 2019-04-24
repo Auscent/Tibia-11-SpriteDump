@@ -107,7 +107,7 @@ namespace T11_SpriteDump
 		
 		private static void DumpSpriteSheet(string file, string firstID, string lastID)
 		{
-			string filePath = String.Format("{0}{1}.lzma", _assetsPath, file);
+			string filePath = String.Format("{0}{1}", _assetsPath, file);
 			if (File.Exists(filePath) == false)
 			{
 				Console.WriteLine("Skipping '{0}', doesn't exist!", file);
@@ -115,7 +115,7 @@ namespace T11_SpriteDump
 				return;
 			}
 			
-			Console.WriteLine("Dumping '{0}.lzma' to 'Sprites {1}-{2}.png'.", file, firstID, lastID);
+			Console.WriteLine("Dumping '{0}' to 'Sprites {1}-{2}.png'.", file, firstID, lastID);
 			
 			MemoryStream spriteBuffer = _spriteBuffer;
 			
